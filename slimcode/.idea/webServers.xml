@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="37dd4361-4c9e-4b34-a01a-360b43f77c41" name="10.30.58.7">
+        <fileTransfer rootFolder="/home/dell" accessType="SFTP" host="10.30.58.7" port="22" sshConfigId="444437b9-47a5-483c-a25e-4c62fc4bc3d1" sshConfig="dell@10.30.58.7:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

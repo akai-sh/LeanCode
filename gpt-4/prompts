@@ -1,0 +1,29 @@
+prompt of code search:
+base:
+{'role': 'system',
+'content': 'You are given a code snippet and a text. You should infer whether the text is corresponding to the code snippet.'},
+{'role': 'user',
+'content': f'Code Snippet: {code}\n\nText: {nl}\n\nPlease infer whether the given code snippet and the given text correspond. Please analyze step-by-step first, and then answer in the following format.\n\nAnalysis: [step-by-step analysis within 50 words]\nAnswer: [Yes/No]\n'}
+
+pruned:
+{'role': 'system',
+'content': 'You are given an incomplete code snippet and a text. You should infer whether the text is corresponding to the original code snippet.'},
+{'role': 'user',
+'content': f'Code Snippet: {code}\n\nText: {nl}\n\nPlease infer whether the given incomplete code snippet and the given text correspond. Please analyze step-by-step first, and then answer in the following format.\n\nAnalysis: [step-by-step analysis within 50 words]\nAnswer: [Yes/No]\n'}
+
+
+prompt of code summarization:
+base:
+{"role": "system",
+"content": "You are given a code snippet. You should write a short text to describe the function of the code snippet."},
+{"role": "user",
+"content": f"Code Snippet: {code}\n\nYou are given a code snippet. You should write a short sentence (within 15 words) to describe the function of the code snippet. Answer in the following format.\n\nCode Description: [code description]\n"}
+
+pruned:
+{"role": "system",
+"content": "You are given an incomplete code snippet. You should write a short text to describe the function of the the original code snippet."},
+{"role": "user",
+"content": f"Code Snippet: {code}\n\nYou are given an incomplete code snippet. You should write a short sentence (within 15 words) to describe the function of the the original code snippet. Answer in the following format.\n\nCode Description: [code description]\n"}
+
+
+
