@@ -14,21 +14,20 @@ cd data/codesearch
 gdown https://drive.google.com/uc?id=1xgSR34XO8xXZg4cZScDYj2eGerBE9iGo
 unzip codesearch_data.zip
 rm  codesearch_data.zip
-cd ../../codesearch
-python process_data.py
 
-cd ../data/code2nl
+cd ../../data/code2nl
 gdown https://drive.google.com/uc?id=1rd2Tc6oUWBo7JouwexW3ksQ0PaOhUr6h
 unzip Cleaned_CodeSearchNet.zip
 rm Cleaned_CodeSearchNet.zip
 cd ../..
 ```
-Because of the algorithm of SlimCode need to remove all the comments in the code and remove the code that can't be converted to AST after removing the comments , so ,we download the test data from [SlimCode](https://github.com/gksajy/slimcode?tab=readme-ov-file)  . you need to download test data of code search and code summarization from [here](https://drive.google.com/drive/folders/1TlhFHyHODQbu7wu30Tg4TQCEmSsKiLJo) to this floder :
+Because of the algorithm of SlimCode need to remove all the comments in the code and remove the code that can't be converted to AST after removing the comments , so ,we download the test data from [SlimCode](https://github.com/gksajy/slimcode?tab=readme-ov-file)  . you need to download test data of code search and code summarization from [here](https://drive.google.com/drive/folders/1TlhFHyHODQbu7wu30Tg4TQCEmSsKiLJo) into `slimcode` floder :
 ```
 cd slimcode
 mkdir data data/codesearch data/code2nl
 cd ..
 python utils/process_slimcode.py
+python codesearch/process_data.py
 ```
 ### Training
 you can use the following cmd to train the model for code search and code summarization on CodeT5 and CodeBERT:
