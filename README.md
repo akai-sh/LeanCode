@@ -57,7 +57,7 @@ Go to `codesearch`,with the help of prune_dietcode.py , you can get the pruned d
 run codesearch/process_pruned_data.py
 
 ### Reproduce the experimental results
-We conducted code simplification experiments on two tasks, `code search` and `code summarization`, using two models: `CodeBERT` and `CodeT5`. These experiments involved three code simplification strategies—`LeanCode`,`SlimCode` , `DietCode`, and `LeanCode with the removal algorithm of DietCode` and five code simplification ratios: `10%`, `20%`, `30%`, `40%`, and `50%`.  
+We conducted code simplification experiments on two tasks, `code search` and `code summarization`, using two models: `CodeBERT` and `CodeT5`. These experiments involved four code simplification strategies—`LeanCode`,`SlimCode` , `DietCode`, and `LeanCode with the removal algorithm of DietCode` and five code simplification ratios: `10%`, `20%`, `30%`, `40%`, and `50%`.  
   
 You can use `gen_cmd.py` in `utils` floder to get the inference cmd to run a broad set of experiments by simply passing the `task_type`, `model_type`, `prune_strategy` and `prune_ratio` arguments. 
 Below is a table listing each parameter along with its description and available options:
