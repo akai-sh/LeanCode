@@ -23,7 +23,13 @@ unzip Cleaned_CodeSearchNet.zip
 rm Cleaned_CodeSearchNet.zip
 cd ../..
 ```
-
+Because of the algorithm of SlimCode need to remove all the comments in the code and remove the code that can't be converted to AST after removing the comments , so ,we download the test data from [SlimCode](https://github.com/gksajy/slimcode?tab=readme-ov-file) you need to download test data of code search and code summarization to this floder:
+```
+cd slimcode
+mkdir data data/codesearch data/code2nl
+cd ..
+python utils/process_slimcode.py
+```
 ### Training
 you can use the following cmd to train the model for code search and code summarization on CodeT5 and CodeBERT:
 
@@ -44,7 +50,6 @@ code summarization on CodeT5:
 python code2nl/CodeT5/run_gen.py --model_type codet5 --task summarize --sub_task java --tokenizer_name Salesforce/codet5-base --model_name_or_path Salesforce/codet5-base --do_train --do_eval --do_eval_bleu  --prune_strategy None --data_num -1 --num_train_epochs 8 --warmup_steps 1000 --learning_rate 5e-5 --patience 2 --data_dir ./data/code2nl/CodeSearchNet/java --cache_path ./models/code2nl/codet5/base/cache_data --output_dir ./models/code2nl/codet5/base --save_last_checkpoints --always_save_model --res_dir ./models/code2nl/codet5/base/prediction --res_fn ./models/code2nl/codet5/base/result.txt --train_batch_size 96 --eval_batch_size 96 --max_source_length 512 --max_target_length 128 --summary_dir ./models/code2nl/codet5/base/tensorboard
 ```
 ### Prepare pruned test data by slimcode and dietcode
-Because of the algorithm of SlimCode need to remove all the comments in the code and remove the code that can't be converted to AST after removing the comments , so ,we download the test data from [SlimCode](https://github.com/gksajy/slimcode?tab=readme-ov-file)
 
 Go to `slimcode` folder , run SlimCode.java ,you can get the pruned data of code search and summarization by SlimCode .
 
