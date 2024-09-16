@@ -61,7 +61,7 @@ def preprocess_test_data(DATA_DIR,language, test_batch_size=1000):
 
 if __name__ == '__main__':
     with open('./data/codesearch/java_test_0.jsonl', 'r') as l \
-            , open('./data/codesearch/slimcode/test.txt', 'r') as s:
+            , open('./slimcode/data/codesearch/test.txt', 'r') as s:
         l_lines = l.readlines()
         s_lines = s.readlines()
         j = 0
