@@ -23,7 +23,7 @@ unzip Cleaned_CodeSearchNet.zip
 rm Cleaned_CodeSearchNet.zip
 cd ../..
 ```
-Because of the algorithm of SlimCode need to remove all the comments in the code and remove the code that can't be converted to AST after removing the comments , so ,we download the test data from [SlimCode](https://github.com/gksajy/slimcode?tab=readme-ov-file)  . you need to download test data of code search and code summarization to this floder :
+Because of the algorithm of SlimCode need to remove all the comments in the code and remove the code that can't be converted to AST after removing the comments , so ,we download the test data from [SlimCode](https://github.com/gksajy/slimcode?tab=readme-ov-file)  . you need to download test data of code search and code summarization from [here](https://drive.google.com/drive/folders/1TlhFHyHODQbu7wu30Tg4TQCEmSsKiLJo)to this floder :
 ```
 cd slimcode
 mkdir data data/codesearch data/code2nl
