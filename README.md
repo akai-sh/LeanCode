@@ -1,5 +1,5 @@
 # LeanCode
-This repo provides the code for reproducing the experiments in LeanCode. LeanCode is a novel program simplification approach that utilize code contexts and attention scores for representing the importance levels of tokens.
+This is the official repository for "LEANCODE: Understanding Models Better for Code Simplification of Pre-trained Large Language Models" (Accepted to ACL 2025 main conference)
 ## Requirements
 - [python3](https://www.python.org/downloads/)
 - [PyTorch](https://pytorch.org/get-started/locally/)
