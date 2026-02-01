@@ -1,4 +1,4 @@
-# LeanCode
+# LEANCODE: Understanding Models Better for Code Simplification of Pre-trained Large Language Models
 This is the official repository for "LEANCODE: Understanding Models Better for Code Simplification of Pre-trained Large Language Models" (Accepted to ACL 2025 main conference)
 ## Requirements
 - [python3](https://www.python.org/downloads/)
